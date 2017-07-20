@@ -15,6 +15,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/")
 public class ReadingListController {
+
+    @Autowired
+    private AmazonProperties amazonProperties;
     @Autowired
     private ReadingListRepository readingListRepository;
 
@@ -26,6 +29,8 @@ public class ReadingListController {
                 readingListRepository.findByReader(reader);
         if (readingList != null) {
             model.addAttribute("books", readingList);
+            model.addAttribute("reader", reader);
+            model.addAttribute("amazonID", amazonProperties.getAssociateId());
         }
         return "readingList";
     }
