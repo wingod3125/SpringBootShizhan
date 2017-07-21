@@ -56,11 +56,11 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <!--mysql-->
-        <dependency>
+        <!--<dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.39</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <build>
